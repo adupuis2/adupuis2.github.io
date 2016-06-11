@@ -182,7 +182,7 @@ html {
   margin: 1em;
 }
 body {
-  background-color: #002b36;
+  background-color: #07252C;
   margin: 0 auto;
   max-width: 23cm;
   border: 1pt solid #586e75;
@@ -202,14 +202,14 @@ a:hover {
   color: #cb4b16;
 }
 h1 {
-  color: #d33682;
+  color: #268bd2;
 }
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: #859900;
+  color: #2aa198;
 }
 pre {
   background-color: #002b36;
