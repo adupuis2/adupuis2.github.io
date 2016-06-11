@@ -10,15 +10,15 @@ The parts arrived a couple of days ago. It's always fun getting a package in the
 
 ![Goodies](/assets/img/tc_01.jpg)
 
-Package contents:
-- 2 Genuino Uno units
-- 2 meters of 30px/m NeoPixel LED strip
-- 25 2kΩ resistors -- they're cheap and all of my resistors are jumbled together :<
-- 1 830-point breadboard
-- 1 Mini infrared remote control
-- 1 Infrared receiver IC
-- 1 Microphone preamp IC
-- 1 5v10a PSU
+Package contents:\\
+- 2 Genuino Uno units\\
+- 2 meters of 30px/m NeoPixel LED strip\\
+- 25 2kΩ resistors -- they're cheap and all of my resistors are jumbled together :<\\
+- 1 830-point breadboard\\
+- 1 Mini infrared remote control\\
+- 1 Infrared receiver IC\\
+- 1 Microphone preamp IC\\
+- 1 5v10a PSU\\
 - 1 switch
 
 Everything else, I already had on hand.
