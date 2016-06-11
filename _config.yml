@@ -1,2 +1,3 @@
 name: Alain Dupuis
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
