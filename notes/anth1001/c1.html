@@ -1,0 +1,31 @@
+---
+layout: notes
+title: unbNotes/anth1001/c1
+permalink: anth1001/c1
+---
+<h2>ANTH1001: Chapter 1</h2>
+{% for entry in site.data.anth1001.c1 %}
+<div class="blurb">
+  <b>
+    {{ entry.word }}:
+  </b>
+  {{ entry.def }}
+  {% if entry.sub_defs != null %}
+    <br />↳
+    <b>
+    {{ entry.sub_defs.title }} --
+    </b>
+    {% for group in entry.sub_defs.defs %}
+    <br />&nbsp &nbsp ↳
+      {% for thing in group %}
+        {% if thing.word != null %}
+          <b>
+            {{ thing.word }}:
+          </b>
+          {{ thing.def }}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endif %}
+</div><!-- /.blurb -->
+{% endfor %}
