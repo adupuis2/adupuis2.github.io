@@ -15,7 +15,6 @@ fetch(target)
 
 function process(x) {
   farray = fetched[0].split("\n");
-  farray = shuffle(farray);
   element = document.getElementById("main");
 
   farray.forEach(e => {
@@ -23,8 +22,9 @@ function process(x) {
     if(e.length > 0){
       parts = e.split(";");
       newhtml =
-        "<details><summary>"
-        + parts[+odds]
+        parts[+odds]
+        + "<details><summary>"
+        + "expand"
         + "</summary>"
         + parts[1-odds]
         + "</details><br />";
