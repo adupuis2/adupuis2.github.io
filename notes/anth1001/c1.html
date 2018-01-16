@@ -3,29 +3,18 @@ layout: notes
 title: unbNotes/anth1001/c1
 permalink: anth1001/c1
 ---
+<script type="text/javascript">
+var target = "../../c1v2.csv";
+</script>
 <h2>ANTH1001: Chapter 1</h2>
-{% for entry in site.data.anth1001.c1 %}
+<br />
+<b>Click to expand answers</b>
+<br />
+<br />
+
 <div class="blurb">
-  <b>
-    {{ entry.word }}:
-  </b>
-  {{ entry.def }}
-  {% if entry.sub_defs != null %}
-    <br />↳
-    <b>
-    {{ entry.sub_defs.title }} --
-    </b>
-    {% for group in entry.sub_defs.defs %}
-    <br />&nbsp &nbsp ↳
-      {% for thing in group %}
-        {% if thing.word != null %}
-          <b>
-            {{ thing.word }}:
-          </b>
-          {{ thing.def }}
-        {% endif %}
-      {% endfor %}
-    {% endfor %}
-  {% endif %}
+  <div id="main">
+  </div>
 </div><!-- /.blurb -->
-{% endfor %}
+<script src="/assets/js/quiz.js">
+</script>
