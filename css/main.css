@@ -239,6 +239,29 @@ h5 {
 h6 {
   font-size: 1.15em;
 }
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.blurb {
+  width: 75%;
+  height: 100%;
+}
+.integral {
+  height: 100px;
+  width: 100%;
+  padding: 10px;
+}
+.igralleft {
+  position: absolute;
+  left: 10%;
+}
+.igralright {
+  position: absolute;
+  right: 10%;
+  visibility: hidden;
+}
 .tag {
   background-color: #073642;
   color: #d33682;

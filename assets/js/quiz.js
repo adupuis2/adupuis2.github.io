@@ -1,3 +1,9 @@
+function show_img(id)
+{
+  img_el = document.getElementById(id);
+  console.log(img_el.style);
+  img_el.style.visibility="visible";
+}
 /*
  * Fisher-Yates shuffle stolen from StackOverflow
  */
@@ -31,29 +37,65 @@ function quiz2html(data, num_q)
   for(i=0; i<num_q; i++)
   {
     e = data[i];
-    odds = Math.random() < .5;
     if(e.length > 0){
       parts = e.split(";");
-      rendered +=
-        "<details>"
-        + "<summary>"
-        + parts[+odds]
-        + "</summary>"
-        + parts[1-odds]
-        + "</details><br />";
+      if(quiztype == "text")
+      {
+        odds = Math.random() < .5;
+        rendered +=
+          "<details>"
+          + "<summary>"
+          + parts[+odds]
+          + "</summary>"
+          + parts[1-odds]
+          + "</details><br />";
+      }
+      if(quiztype == "image")
+      {
+        rendered +=
+          "<br /><div class=\"integral\">"
+          + "<img id="
+          + "\"" + i + "\""
+          + " src=\""
+          + parts[0]
+          + "\" class=\"igralleft\" "
+          + "height=\"100\" "
+          + "onclick=show_img(\"img"
+          + i
+          + "\") "
+          + "/>"
+          + "<img src=\""
+          + parts[1]
+          + "\" class=\"igralright\" "
+          + "height=\"100\" "
+          + "id=\"img"
+          + i
+          + "\" "
+          + "/>"
+          + "</div>"
+      }
     }
   }
 
   return rendered;
 }
 
-function main(data)
+/*
+ * The 'main' function of the application.
+ * This is called after a successful fetch,
+ * where the fetched data is passed as an arg.
+ */
+function main()
 {
-  processed = process_data(data);
+  if(fetched == null)
+    return;
+  if(quiztype == null)
+    return null;
+  processed = process_data(fetched);
   num_Qs = Math.min(processed.length, numQuestions);
   rendered_html = quiz2html(processed, num_Qs);
   element = document.getElementById("main");
-  element.innerHTML += rendered_html;
+  element.innerHTML = rendered_html;
 }
 
 fetched = [];
@@ -61,6 +103,6 @@ fetch(target)
   .then((resp) => resp.text())
   .then(function(data) {
     fetched.push(data);
-    main(fetched);
+    main();
   });
 
