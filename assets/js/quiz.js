@@ -1,7 +1,6 @@
 function show_img(id)
 {
   img_el = document.getElementById(id);
-  console.log(img_el.style);
   img_el.style.visibility="visible";
 }
 /*
