@@ -104,6 +104,8 @@ function main()
     for(var i=0; fetched[i]; i++)
     {
       var sliced = fetched[i].slice(0,1);
+      console.log(fetched[i]);
+      console.log(sliced);
       if(sliced == "a") // avoir
         if(avoir)
           new_fetched.push(fetched[i]);
