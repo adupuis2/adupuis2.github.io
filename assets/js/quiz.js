@@ -90,7 +90,6 @@ function main()
     return;
   if(quiztype == null)
     return null;
-  document.write(fetched);
   processed = process_data(fetched);
   num_Qs = Math.min(processed.length, numQuestions);
   rendered_html = quiz2html(processed, num_Qs);
