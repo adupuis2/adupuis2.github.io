@@ -93,7 +93,7 @@ function main()
 
   var processed = null;
 
-  if(target.contains("french"))
+  if(target.includes("french"))
   {
     var avoir = document.getElementById("avoir_box").checked;
     var etre = document.getElementById("etre_box").checked;
