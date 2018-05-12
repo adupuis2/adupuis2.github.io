@@ -116,7 +116,10 @@ function main()
         if(etre)
           new_fetched.push(fetched[i]);
     }
-    processed = process_data(new_fetched);
+    if(new_fetched.length > 0)
+      processed = process_data(new_fetched);
+    else
+      return;
   }
   else
     processed = process_data(fetched);
