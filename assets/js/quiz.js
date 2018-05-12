@@ -38,16 +38,22 @@ function process_data(x) {
     {
       var sliced = quizdata[i].slice(0,1);
       if(sliced == "a") // avoir
+      {
         if(avoir)
           new_quizdata.push(quizdata[i]);
+      }
 
       else if(sliced == "f") // faire
+      {
         if(faire)
           new_quizdata.push(quizdata[i]);
+      }
 
       else if(sliced == "e") // etre
+      {
         if(etre)
           new_quizdata.push(quizdata[i]);
+      }
     }
     quizdata = new_quizdata;
   }
