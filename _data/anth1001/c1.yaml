@@ -1,17 +1,9 @@
-- word: 'Anthropology'
-  def: 'The study of humans across time and space.'
-  sub_defs:
-      title: 'Types of anthropology'
-      defs:
-          def2:
-              word: 'Archaelogy'
-              def: 'Material remains of past cultures.'
-          def1:
-              word: 'Biological/Physical anthropology'
-              def: 'Evolution, forensics, primatology, contemporary variations in humans.'
-          def4:
-              word: 'Cultural anthropology'
-              def: 'Contemporary cultures and underlying patterns of human culture.'
-          def3:
-              word: 'Linguistic anthropology'
-              def: 'Human communication within its socio-cultural context.'
+- Anthropology: 'The study of humans across time and space.'
+  sub_chapters:
+    - title: 'Einführung in Jekyll'
+
+- chapters: 'Installation'
+  sub_chapters:
+    - title: Sub_Subchapter
+      sub_sub_chapters:
+        - title : 'Mac Installation'

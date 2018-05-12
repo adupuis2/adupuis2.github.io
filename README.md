@@ -1,3 +1,3 @@
-A collection of interactive pages to review course notes.
+Todo: this.
 
-So far, only *integrals* and *cultural anthropology: chapter one* are complete.
+Very busy :(
