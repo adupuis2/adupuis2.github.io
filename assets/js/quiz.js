@@ -117,7 +117,10 @@ function main()
           new_fetched.push(fetched[i]);
     }
     if(new_fetched.length > 0)
+    {
       processed = process_data(new_fetched);
+      console.log(new_fetched);
+    }
     else
       return;
   }
