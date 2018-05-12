@@ -25,6 +25,32 @@ function process_data(x) {
    */
   quizdata = x[0];
   quizdata = quizdata.split("\n");
+
+  new_quizdata = [];
+
+  if(target.includes("french")) // filter french selections
+  {
+    var avoir = document.getElementById("avoir_box").checked;
+    var etre = document.getElementById("etre_box").checked;
+    var faire = document.getElementById("faire_box").checked;
+
+    for(var i=0; quizdata[i]; i++)
+    {
+      var sliced = quizdata[i].slice(0,1);
+      if(sliced == "a") // avoir
+        if(avoir)
+          new_quizdata.push(quizdata[i]);
+
+      else if(sliced == "f") // faire
+        if(faire)
+          new_quizdata.push(quizdata[i]);
+
+      else if(sliced == "e") // etre
+        if(etre)
+          new_quizdata.push(quizdata[i]);
+    }
+    quizdata = new_quizdata;
+  }
   quizdata = shuffle(quizdata);
 
   return quizdata;
@@ -91,46 +117,10 @@ function main()
   if(quiztype == null)
     return null;
 
-  var processed = null;
-
-  if(target.includes("french"))
-  {
-    var avoir = document.getElementById("avoir_box").checked;
-    var etre = document.getElementById("etre_box").checked;
-    var faire = document.getElementById("faire_box").checked;
-
-    var new_fetched = [];
-
-    for(var i=0; fetched[i]; i++)
-    {
-      var sliced = fetched[i].slice(0,1);
-      console.log(fetched[i]);
-      console.log(sliced);
-      if(sliced == "a") // avoir
-        if(avoir)
-          new_fetched.push(fetched[i]);
-
-      else if(sliced == "f") // faire
-        if(faire)
-          new_fetched.push(fetched[i]);
-
-      else if(sliced == "e") // etre
-        if(etre)
-          new_fetched.push(fetched[i]);
-    }
-    if(new_fetched.length > 0)
-    {
-      processed = process_data(new_fetched);
-      console.log(new_fetched);
-    }
-    else
-      return;
-  }
-  else
-    processed = process_data(fetched);
-  num_Qs = Math.min(processed.length, numQuestions);
-  rendered_html = quiz2html(processed, num_Qs);
-  element = document.getElementById("main");
+  var processed = process_data(fetched);
+  var num_Qs = Math.min(processed.length, numQuestions);
+  var rendered_html = quiz2html(processed, num_Qs);
+  var element = document.getElementById("main");
   element.innerHTML = rendered_html;
 }
 
