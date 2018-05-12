@@ -90,7 +90,36 @@ function main()
     return;
   if(quiztype == null)
     return null;
-  processed = process_data(fetched);
+
+  var processed = null;
+
+  if(target.contains("french"))
+  {
+    var avoir = document.getElementById("avoir_box").checked;
+    var etre = document.getElementById("etre_box").checked;
+    var faire = document.getElementById("faire_box").checked;
+
+    var new_fetched = [];
+
+    for(var i=0; fetched[i]; i++)
+    {
+      var sliced = fetched[i].slice(0,1);
+      if(sliced == "a") // avoir
+        if(avoir)
+          new_fetched.push(fetched[i]);
+
+      else if(sliced == "f") // faire
+        if(faire)
+          new_fetched.push(fetched[i]);
+
+      else if(sliced == "e") // etre
+        if(etre)
+          new_fetched.push(fetched[i]);
+    }
+    processed = process_data(new_fetched);
+  }
+  else
+    processed = process_data(fetched);
   num_Qs = Math.min(processed.length, numQuestions);
   rendered_html = quiz2html(processed, num_Qs);
   element = document.getElementById("main");
