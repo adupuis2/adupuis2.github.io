@@ -32,8 +32,8 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
-body {
-  margin: 0;
+a {
+  color: #6c71c4;
 }
 a:focus {
   outline: thin dotted;
@@ -41,9 +41,10 @@ a:focus {
 a:active,
 a:hover {
   outline: 0;
+  color: #2aa198;
 }
-h1 {
-  font-size: 2em;
+a:visited {
+  color: #d33682;
 }
 abbr[title] {
   border-bottom: 1px dotted;
@@ -59,16 +60,10 @@ mark {
   background: #ff0;
   color: #000;
 }
-code,
 kbd,
-pre,
 samp {
   font-family: monospace, serif;
   font-size: 1em;
-}
-pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
 }
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
@@ -76,17 +71,18 @@ q {
 small {
   font-size: 80%;
 }
-sub,
 sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
-}
-sup {
   top: -0.5em;
 }
 sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
   bottom: -0.25em;
 }
 img {
@@ -162,10 +158,21 @@ table {
 html {
   font-family: 'PT Sans', sans-serif;
 }
-pre,
-code {
-  font-family: 'Inconsolata', sans-serif;
+html {
+  background-color: #073642;
+  color: #839496;
+  margin: 1em;
 }
+nav {
+  border-bottom: 1px solid #586e75;
+}
+body {
+  background-color: #07252C;
+  margin: 0 auto;
+  border: 1pt solid #586e75;
+  padding: 1em;
+}
+/* Headers */
 h1,
 h2,
 h3,
@@ -175,69 +182,41 @@ h6 {
   font-family: 'PT Sans Narrow', sans-serif;
   font-weight: 700;
   display: inline-block;
-}
-html {
-  background-color: #073642;
-  color: #839496;
-  margin: 1em;
-}
-body {
-  background-color: #07252C;
-  margin: 0 auto;
-  max-width: 23cm;
-  border: 1pt solid #586e75;
-  padding: 1em;
-}
-code {
-  background-color: #073642;
-  padding: 2px;
-}
-a {
-  color: #6c71c4;
-}
-a:visited {
-  color: #d33682;
-}
-a:hover {
-  color: #2aa198;
+  margin-top: 20px;
+  margin-bottom: 0px;
 }
 h1 {
+  font-size: 2.8em;
   color: #268bd2;
 }
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
+  font-size: 2.4em;
   color: #2aa198;
 }
-pre {
+h3 {
+  font-size: 1.8em;
+  color: #2aa198;
+}
+h4 {
+  font-size: 1.4em;
+  color: #2aa198;
+}
+h5 {
+  font-size: 1.3em;
+  color: #2aa198;
+}
+h6 {
+  font-size: 1.15em;
+  color: #2aa198;
+}
+pre,
+code {
   background-color: #002b36;
   color: #839496;
   border: 1pt solid #586e75;
   padding: 1em;
   box-shadow: 5pt 5pt 8pt #073642;
-}
-pre code {
-  background-color: #002b36;
-}
-h1 {
-  font-size: 2.8em;
-}
-h2 {
-  font-size: 2.4em;
-}
-h3 {
-  font-size: 1.8em;
-}
-h4 {
-  font-size: 1.4em;
-}
-h5 {
-  font-size: 1.3em;
-}
-h6 {
-  font-size: 1.15em;
+  font-family: 'Inconsolata', monospace, serif;
 }
 .container {
   position: relative;
@@ -245,8 +224,10 @@ h6 {
   height: 100%;
 }
 .blurb {
-  width: 75%;
+  width: 98%;
   height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .integral {
   height: 100px;

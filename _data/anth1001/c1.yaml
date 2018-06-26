@@ -1,9 +1,0 @@
-- Anthropology: 'The study of humans across time and space.'
-  sub_chapters:
-    - title: 'Einführung in Jekyll'
-
-- chapters: 'Installation'
-  sub_chapters:
-    - title: Sub_Subchapter
-      sub_sub_chapters:
-        - title : 'Mac Installation'
