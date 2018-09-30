@@ -1,5 +1,5 @@
 {
-  "homepage": "http://adupuis2.github.io",
+  "homepage": "https://adupuis2.github.io",
   "name": "adupuis2.github.io",
   "version": "0.1.0",
   "private": true,
@@ -10,7 +10,7 @@
   },
   "scripts": {
     "predeploy": "yarn run build",
-    "deploy": "npx gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
