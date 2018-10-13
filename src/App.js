@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/common/Header/';
 import {createMuiTheme, Grid, MuiThemeProvider} from '@material-ui/core';
+import {hot} from 'react-hot-loader';
 
 const appTheme = createMuiTheme({
   palette: {
@@ -20,4 +21,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default hot(module)(App);
