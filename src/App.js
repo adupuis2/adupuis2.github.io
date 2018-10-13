@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import logo from './images/logo.svg';
-import appStyles from './appStyles';
-import Header from './components/Header/';
+import Header from './components/common/Header/';
 import {createMuiTheme, Grid, MuiThemeProvider} from '@material-ui/core';
 
 const appTheme = createMuiTheme({
