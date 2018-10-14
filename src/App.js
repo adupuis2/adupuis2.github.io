@@ -5,7 +5,7 @@ import lightBlue from "@material-ui/core/colors/lightBlue";
 import pink from "@material-ui/core/colors/pink";
 import red from "@material-ui/core/colors/red";
 import { AppContainer, hot } from "react-hot-loader";
-import {Router} from 'react-router-dom';
+import {HashRouter as Router} from 'react-router-dom';
 import RootRouter from "./components/RootRouter";
 import history from './history';
 
@@ -27,7 +27,7 @@ class App extends React.Component {
     return (
       <AppContainer>
         <MuiThemeProvider theme={appTheme}>
-          <Router history={history}>
+          <Router>
             <RootRouter/>
           </Router>
         </MuiThemeProvider>
