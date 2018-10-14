@@ -1,10 +1,13 @@
-import React, { Component } from "react";
-import Header from "./components/common/Header/";
+import React from "react";
 import { createMuiTheme, Grid, MuiThemeProvider } from "@material-ui/core";
+import Header from "./components/common/Header/Header.jsx";
 import lightBlue from "@material-ui/core/colors/lightBlue";
 import pink from "@material-ui/core/colors/pink";
 import red from "@material-ui/core/colors/red";
-import { hot } from "react-hot-loader";
+import { AppContainer, hot } from "react-hot-loader";
+import {Router} from 'react-router-dom';
+import RootRouter from "./components/RootRouter";
+import history from './history';
 
 const appTheme = createMuiTheme({
   typography: {
@@ -19,12 +22,16 @@ const appTheme = createMuiTheme({
   }
 });
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <MuiThemeProvider theme={appTheme}>
-        <Header />
-      </MuiThemeProvider>
+      <AppContainer>
+        <MuiThemeProvider theme={appTheme}>
+          <Router history={history}>
+            <RootRouter/>
+          </Router>
+        </MuiThemeProvider>
+      </AppContainer>
     );
   }
 }

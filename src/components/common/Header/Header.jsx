@@ -1,47 +1,25 @@
 import React from 'react';
-import {AppBar, Button, Grid, Typography, withStyles} from '@material-ui/core';
-import {withTheme} from '@material-ui/core';
+import AppBar from '@material-ui/core/AppBar/'
+import Grid from '@material-ui/core/Grid/'
+import withStyles from '@material-ui/core/styles/withStyles';
+import FaceIcon from '@material-ui/icons/FaceTwoTone';
+import CodeIcon from '@material-ui/icons/CodeTwoTone';
+import MemoryIcon from '@material-ui/icons/Memory';
+import headerStyles from "./headerStyles";
 
 class Header extends React.Component {
   render() {
-    const btnStyle={
-      border: '1px solid yellow',
-    };
+    const {classes}= this.props;
     return(
-      <Grid item xs={12}>
-        <AppBar position={"static"}>
-          <Grid container direction={"row"}>
-            <Grid
-              item
-              xs={3}
-            >
-              <Typography>
-                1/4 Width.
-              </Typography>
-              <Button style={{...btnStyle}}>
-                <Typography>
-                  Test button one
-                </Typography>
-              </Button>
-            </Grid>
-            <Grid
-              item
-              xs={9}
-            >
-              <Typography>
-                3/4 Width.
-              </Typography>
-              <Button style={{...btnStyle}}>
-                <Typography>
-                  Test button two
-                </Typography>
-              </Button>
-            </Grid>
-          </Grid>
-        </AppBar>
-      </Grid>
+      <AppBar position={"static"} className={classes.headerAppBar}>
+        <Grid container direction={"row"} className={classes.headerContainer}>
+          <FaceIcon className={classes.headerIcon}/>
+          <CodeIcon className={classes.headerIcon}/>
+          <MemoryIcon className={classes.headerIcon}/>
+        </Grid>
+      </AppBar>
     );
   }
 }
 
-export default withTheme()(Header);
+export default withStyles(headerStyles)(Header);
