@@ -1,31 +1,19 @@
 import React from 'react';
-import Typography from "@material-ui/core/Typography/Typography";
-import rootRouterStyles from "./rootRouterStyles";
-import withStyles from "@material-ui/core/styles/withStyles";
-import {Link, Route} from 'react-router-dom';
-import {Switch} from 'react-router';
-import Header from "../common/Header/index.js";
+import {Route} from 'react-router-dom';
+import { Redirect, Switch } from "react-router";
+import Home from "../Home/index.js";
+import LandingPage from "../LandingPage/index.js";
 
 class RootRouter extends React.Component {
-
-  Thingy ({match}) {
-    return (
-      <Typography>
-        Thingy.
-      </Typography>
-    )
-  }
-
   render () {
-    console.log(this.props);
     return (
       <Switch>
-        <Route exact path={`/1`} render={()=><Link to={"/2"}><Typography>one</Typography></Link>} />
-        <Route exact path={`/2`} render={()=><Typography>two</Typography>} />
-        <Route exact path={`/ok`} component={Header} />
+        <Route exact path={`/runway`} component={LandingPage} />
+        <Route exact path={`/home`} component={Home} />
+        <Route path={`/*`} render={()=><Redirect to={`/runway`}/>} />
       </Switch>
     );
   }
 }
 
-export default withStyles(rootRouterStyles)(RootRouter);
+export default RootRouter;

@@ -5,9 +5,9 @@ import lightBlue from "@material-ui/core/colors/lightBlue";
 import pink from "@material-ui/core/colors/pink";
 import red from "@material-ui/core/colors/red";
 import { AppContainer, hot } from "react-hot-loader";
-import {HashRouter as Router} from 'react-router-dom';
+import { HashRouter as Router } from "react-router-dom";
 import RootRouter from "./components/RootRouter";
-import history from './history';
+import history from "./history";
 
 const appTheme = createMuiTheme({
   typography: {
@@ -28,7 +28,7 @@ class App extends React.Component {
       <AppContainer>
         <MuiThemeProvider theme={appTheme}>
           <Router>
-            <RootRouter/>
+            <RootRouter />
           </Router>
         </MuiThemeProvider>
       </AppContainer>
