@@ -22,7 +22,10 @@ class LandingPage extends React.Component {
     if(height > 600)
       return height/3;
 
-    if(height < 600)
+    if(height > 500)
+      return height/4;
+
+    if(height <= 500)
       return 0;
   };
 
@@ -31,11 +34,13 @@ class LandingPage extends React.Component {
     const {height, width} = this.state;
     const activities = ["developer",
       "tinkerer",
-      "learner",
       "hiker",
+      "dog's best friend",
       "gamer",
       "builder",
+      "dork",
       "mentor",
+      "student",
       "volunteer",
     ];
     console.log(this.props);
@@ -48,7 +53,7 @@ class LandingPage extends React.Component {
               ? "h3"
               : "h2"}
             className={classes.introTextHeader}
-            style={height>600
+            style={height>500
               ? {paddingBottom: "50px"}
               : {}
             }
