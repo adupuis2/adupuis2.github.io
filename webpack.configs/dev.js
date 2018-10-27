@@ -1,11 +1,12 @@
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
+const paths = require('./paths');
 
 module.exports = {
   entry: [
     '@babel/polyfill',
-    './src/index.js',
+    paths.src + '/index.js',
   ],
   devtool: "eval-source-map",
   devServer: {

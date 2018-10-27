@@ -7,7 +7,6 @@ import red from "@material-ui/core/colors/red";
 import { AppContainer, hot } from "react-hot-loader";
 import { HashRouter as Router } from "react-router-dom";
 import RootRouter from "./components/RootRouter";
-import history from "./history";
 
 const appTheme = createMuiTheme({
   typography: {

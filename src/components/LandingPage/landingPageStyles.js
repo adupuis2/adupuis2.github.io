@@ -2,7 +2,6 @@ import {createStyles} from '@material-ui/core';
 
 const landingPageStyles = (theme) =>
   createStyles({
-
     introBackground: {
       alignItems: "center",
       justifyContent: "center",
@@ -13,24 +12,39 @@ const landingPageStyles = (theme) =>
 
     introContainer: {
       alignItems: "center",
-      justifyContent: "flex-start",
-      height: "100%",
+      justifyContent: "center",
       width: "100%",
+      height: "100vh",
     },
 
     introTextHeader: {
-      alignItems: "center",
       color: theme.palette.common.white,
-      fontWeight: 100,
-      justifyContent: "center",
-      position: "relative",
+      fontWeight: 400,
+      [theme.breakpoints.between('xs', 'sm')]: {
+        fontSize: "calc(34px + 3vw)",
+      },
+      [theme.breakpoints.between('sm', 'xl')]: {
+        fontSize: "52px",
+      },
+      // alignItems: "center",
+      // justifyContent: "center",
+      // position: "relative",
       zIndex: 2,
     },
 
-    introText: {
+    slotContainer: {
+    },
+
+    activityText: {
+      color: theme.palette.common.white,
+      [theme.breakpoints.between('xs', 'sm')]: {
+        fontSize: "calc(20px + 1vw)",
+      },
+      [theme.breakpoints.between('md', 'xl')]: {
+        fontSize: "30px",
+      },
       fontWeight: 100,
       zIndex: 2,
-      color: theme.palette.common.white,
     },
   });
 

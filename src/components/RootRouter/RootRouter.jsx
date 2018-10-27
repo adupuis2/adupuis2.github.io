@@ -1,8 +1,8 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
+import LandingPage from "../LandingPage";
+import Home from "../Home";
 import { Redirect, Switch } from "react-router";
-import Home from "../Home/index.js";
-import LandingPage from "../LandingPage/index.js";
 
 class RootRouter extends React.Component {
   render () {
