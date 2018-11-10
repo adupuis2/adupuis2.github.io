@@ -9,6 +9,7 @@
     "@material-ui/icons": "^3.0.1",
     "classnames": "^2.2.6",
     "compression-webpack-plugin": "^2.0.0",
+    "eslint": "^5.9.0",
     "history": "^4.7.2",
     "lodash": "^4.17.11",
     "react": "^16.5.2",

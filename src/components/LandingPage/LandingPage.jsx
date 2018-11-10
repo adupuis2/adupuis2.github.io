@@ -1,48 +1,159 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Typography from "@material-ui/core/Typography/Typography";
 import landingPageStyles from "./landingPageStyles";
 import withStyles from "@material-ui/core/styles/withStyles";
-import Grid from "@material-ui/core/Grid/Grid";
-import Blur from 'react-blur';
-import code from '../../images/code.png';
+import {Card, CardContent, CardHeader, Grid} from "@material-ui/core";
 
 const MYNAME = 'Alain Dupuis';
-const activities = ["developer",
-  "tinkerer",
-  "hiker",
-  "dogs' best friend",
-  "gamer",
-  "builder",
-  "dork",
-  "mentor",
-  "student",
-  "volunteer",
-];
 
 class LandingPage extends React.Component {
   render () {
     const {classes} = this.props;
     console.log(this.props);
     return (
-      <Blur img={code} blurRadius={10} enableStyles className={classes.introBackground}>
-        <Grid container direction={"column"} className={classes.introContainer}>
-            <Typography className={classes.introTextHeader}>
-              {MYNAME}
-            </Typography>
-
-              {
-                activities.map((activity, index) =>
-                  <Typography
-                    key={index+1}
-                    className={classes.activityText}
-                    style={{opacity: 1 - (index/activities.length)}}
-                  >
-                    {activity}
-                  </Typography>
-                )
-              }
+      <Grid container direction={"row"} className={classes.contentContainer}>
+        <Grid item>
+          <Typography color={"error"}>Nav cards</Typography>
         </Grid>
-      </Blur>
+        <Grid item>
+          <Card>
+            <CardHeader title="Content panel" className={classes.introTextHeader}/>
+            <CardContent>
+              <Typography>
+                Placeholder content.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader title="Content panel" className={classes.introTextHeader}/>
+            <CardContent>
+              <Typography>
+                Placeholder content.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader title="Content panel" className={classes.introTextHeader}/>
+            <CardContent>
+              <Typography>
+                Placeholder content.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader title="Content panel" className={classes.introTextHeader}/>
+            <CardContent>
+              <Typography>
+                Placeholder content.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader title="Content panel" className={classes.introTextHeader}/>
+            <CardContent>
+              <Typography>
+                Placeholder content.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader title="Content panel" className={classes.introTextHeader}/>
+            <CardContent>
+              <Typography>
+                Placeholder content.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader title="Content panel" className={classes.introTextHeader}/>
+            <CardContent>
+              <Typography>
+                Placeholder content.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader title="Content panel" className={classes.introTextHeader}/>
+            <CardContent>
+              <Typography>
+                Placeholder content.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader title="Content panel" className={classes.introTextHeader}/>
+            <CardContent>
+              <Typography>
+                Placeholder content.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader title="Content panel" className={classes.introTextHeader}/>
+            <CardContent>
+              <Typography>
+                Placeholder content.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader title="Content panel" className={classes.introTextHeader}/>
+            <CardContent>
+              <Typography>
+                Placeholder content.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader title="Content panel" className={classes.introTextHeader}/>
+            <CardContent>
+              <Typography>
+                Placeholder content.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader title="Content panel" className={classes.introTextHeader}/>
+            <CardContent>
+              <Typography>
+                Placeholder content.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader title="Content panel" className={classes.introTextHeader}/>
+            <CardContent>
+              <Typography>
+                Placeholder content.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader title="Content panel" className={classes.introTextHeader}/>
+            <CardContent>
+              <Typography>
+                Placeholder content.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader title="Content panel" className={classes.introTextHeader}/>
+            <CardContent>
+              <Typography>
+                Placeholder content.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader title="Content panel" className={classes.introTextHeader}/>
+            <CardContent>
+              <Typography>
+                Placeholder content.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
     );
   }
 }

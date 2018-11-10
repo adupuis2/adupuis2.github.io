@@ -2,19 +2,14 @@ import {createStyles} from '@material-ui/core';
 
 const landingPageStyles = (theme) =>
   createStyles({
-    introBackground: {
-      alignItems: "center",
-      justifyContent: "center",
-      width: "100%",
-      height: "100vh",
-      zIndex: 1,
-    },
 
-    introContainer: {
+    contentContainer: {
       alignItems: "center",
+      filter: 'blur(0)',
       justifyContent: "center",
       width: "100%",
       height: "100vh",
+      zIndex: 10,
     },
 
     introTextHeader: {
@@ -29,7 +24,7 @@ const landingPageStyles = (theme) =>
       // alignItems: "center",
       // justifyContent: "center",
       // position: "relative",
-      zIndex: 2,
+      zIndex: 150,
     },
 
     slotContainer: {
@@ -44,7 +39,6 @@ const landingPageStyles = (theme) =>
         fontSize: "30px",
       },
       fontWeight: 100,
-      zIndex: 2,
     },
   });
 
