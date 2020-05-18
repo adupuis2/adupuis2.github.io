@@ -13,7 +13,7 @@ body {
   font-weight: normal;
   background: $background;
   background-attachment: fixed !important;
-  background: linear_gradient($background, lighten($background, 20%));
+  background-image: linear_gradient($background, lighten($background, 20%));
 }
 
 h1, h2, h3, h4, h5, h6 {

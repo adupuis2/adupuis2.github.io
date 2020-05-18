@@ -15,7 +15,26 @@
     <link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
   </head>
   <body class="{{ site.colorspace }}">
     <div class="wrapper">
+      {% if site.show_header %}
+        <section>
+      {% else %}
+        <section class="no-header">
+      {% endif %}
+      <div id="title">
+        {% if page.icon %}
+          <img src="{{ page.icon | relative_url }}" />
+        {% endif %}
+
+        {% if include.smalltitle %}
+          {% include smalltitle.html %}
+        {% else %}
+          {% include bigtitle.html %}
+        {% endif %}
+        <span class="rightmost">
+          <a href="{{ site.about_page.url }}">{{ site.about_page.text }}</a>
+        </span>
+      <hr>
+    </div>
