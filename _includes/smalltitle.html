@@ -1,0 +1,29 @@
+{% if site.show_header %}
+  <section>
+{% else %}
+  <section class="no-header">
+{% endif %}
+<div id="title">
+  {% if page.icon %}
+    <img src="{{ page.icon | relative_url }}" />
+  {% endif %}
+  <h3><a href="/">
+      {{ site.title | default: site.github.repository_name }}
+  </a></h3>
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    {% if page.date %}
+      <div style="align-self: flex-start;">
+        <h4>{{ page.date | date_to_string: "ordinal", "US" }}</h4>
+      </div>
+    {% endif %}
+    {% if page.title %}
+      <div>
+        <h3>{{ page.title }}</h3>
+      </div>
+    {% endif %}
+      <div style="align-self: flex-end;">
+      <a href="{{ site.about_page.url }}">{{ site.about_page.text }}</a>
+    </div>
+  </div>
+  <hr>
+</div>
